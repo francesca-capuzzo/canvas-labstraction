@@ -6,7 +6,7 @@ class MathC{
     static randomFloatFromInterval(min, max, decimal = 3) {
         const tempMin = min * (10 ** decimal);
         const tempMax = max * (10 ** decimal);
-        const random = Math.floor(Math.random() * (tempMax - tempMin + 1) + tempMin);
+        const random = this.randomIntFromInterval(tempMin, tempMax);
         const floatRandom = random / (10 ** decimal);
         return floatRandom;
     }

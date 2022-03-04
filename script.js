@@ -26,10 +26,10 @@ for (let i = 0; i < 100; i++) {
     const radius = (Math.random() * 50) + 1;
     const x = MathC.randomIntFromInterval(radius, canvas.width - radius)
     const y = MathC.randomIntFromInterval(radius, canvas.height - radius)
-    const sX = MathC.randomFloatFromInterval(-1, 1);
-    const sY = MathC.randomFloatFromInterval(-1, 1);
+    const sX = MathC.randomFloatFromInterval(-2, 2);
+    const sY = MathC.randomFloatFromInterval(-2, 2);
     const c = getRandomColor();
-    const sprite = new CircleSprite(x, y, 1, sX, sY, c);
+    const sprite = new CircleSprite(x, y, radius, sX, sY, c);
     sprites.push(sprite);
 }
 
@@ -67,7 +67,7 @@ function getRandomColor() {
 
 setInterval(() => {
     // context.fillStyle = "yellow";
-    // context.clearRect(0, 0, canvas.width, canvas.height);
+    context.clearRect(0, 0, canvas.width, canvas.height);
     // sprite.draw(context);
     // sprite2.draw(context);
     // sprite.update(canvas);

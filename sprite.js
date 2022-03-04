@@ -39,8 +39,8 @@ class CircleSprite {
     }
 
     update(canvas) {
-        this.speedX = (Math.random() < 0.02 ? MathC.randomFloatFromInterval(-1, 1) : this.speedX);
-        this.speedY = (Math.random() < 0.02 ? MathC.randomFloatFromInterval(-1, 1) : this.speedY);
+        // this.speedX = (Math.random() < 0.02 ? MathC.randomFloatFromInterval(-1, 1) : this.speedX);
+        // this.speedY = (Math.random() < 0.02 ? MathC.randomFloatFromInterval(-1, 1) : this.speedY);
         this.x = this.x + this.speedX;
         this.y = this.y + this.speedY;
         if (this.x > canvas.width - this.radius || this.x < this.radius) {
